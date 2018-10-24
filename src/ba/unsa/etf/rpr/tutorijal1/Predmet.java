@@ -54,7 +54,8 @@ public class Predmet {
 
     public boolean upisiStudenta(Student s) {   // upis studenta na predmet
 
-        if(brojStudenata>=maxBrojStudenata) return false; // dodavanje u puni red
+        int pozicija = pohadja(s);
+        if(brojStudenata >= maxBrojStudenata || pozicija != -1) return false; // dodavanje u puni red ili student je vec upisan
         nizStudenata[brojStudenata] = s;
         brojStudenata++;
         return true;

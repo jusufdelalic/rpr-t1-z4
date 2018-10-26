@@ -34,9 +34,12 @@ public class Predmet {
         brojStudenata = broj;
     }
 
+    public int getMaxBrojStudenata() { return maxBrojStudenata; }
 
 
-    public int pohadja(Student s) { // vracamo poziciju u nizu ako student slusa predmet
+
+
+    public int pohadja(Student s) { // vracamo poziciju u nizu ako student slusa predmet, u suprotnom vracamo -1
         for(int i=0;i<brojStudenata;i++)
             if (nizStudenata[i] == s)
                 return i; //poredimo reference
